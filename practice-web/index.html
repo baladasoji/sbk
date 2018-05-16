@@ -40,10 +40,13 @@
             <a class="nav-link" href="#players">Players</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#schedule" onClick="makeSinglesSchedule()">Singles Schedule</a>
+            <a class="nav-link" href="#schedule" onClick="makeSchedule('singles')">Make singles plan</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#schedule" onClick="makeDoublesSchedule()">Doubles Schedule</a>
+            <a class="nav-link" href="#schedule" onClick="makeSchedule('doubles')">Make doubles plan</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#schedule" onClick="showSchedule()">Refresh Schedule</a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="#" onClick="checkoutAll()">CheckoutAll</a>
@@ -69,48 +72,11 @@
 
         <div class="container" id="players">
         </div> <!-- players -->
+        <p></p>
+        <p></p>
+        <p></p>
         <div class="container" id="schedule">
-        </div> <!-- players -->
-
-        <!--
-        <div id="schedule">
-            <div class="container">
-            <h2 class="display-5">Court information</h2>
-                <div class="wrapper" name="mylist">
-                        <div class="court">
-                            <div class="homeplayer" id="player1">Vacant</div>
-                            <div class="awayplayer" id="player2">Vacant</div>
-                            <div class="homeplayer" id="player3">Vacant</div>
-                            <div class="awayplayer" id="player4">Vacant</div>
-                        </div>
-                        <div class="court">
-                            <div class="homeplayer" id="player5">Vacant</div>
-                            <div class="awayplayer" id="player6">Vacant</div>
-                            <div class="homeplayer" id="player7">Vacant</div>
-                            <div class="awayplayer" id="player8">Vacant</div>
-                        </div>
-                        <div class="court">
-                            <div class="homeplayer" id="player9">Vacant</div>
-                            <div class="awayplayer" id="player10">Vacant</div>
-                            <div class="homeplayer" id="player11">Vacant</div>
-                            <div class="awayplayer" id="player12">Vacant</div>
-                        </div>
-                        <div class="court">
-                            <div class="homeplayer" id="player13">Vacant</div>
-                            <div class="awayplayer" id="player14">Vacant</div>
-                            <div class="homeplayer" id="player15">Vacant</div>
-                            <div class="awayplayer" id="player16">Vacant</div>
-                        </div>
-                        <div class="court">
-                            <div class="homeplayer" id="player17">Vacant</div>
-                            <div class="awayplayer" id="player18">Vacant</div>
-                            <div class="homeplayer" id="player19">Vacant</div>
-                            <div class="awayplayer" id="player20">Vacant</div>
-                        </div>
-                 </div>
-
-            </div>
-        </div> --> <!-- schedule -->
+        </div> <!-- schedule -->
 
     </main>
   </body>

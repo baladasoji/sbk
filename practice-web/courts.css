@@ -42,6 +42,16 @@ body {
         padding: 20px;
         font-size: 150%;
     }
+    .playerincourt {
+        background-color: #77bb77;
+        border-radius: 5px;
+        font-size: 180%;
+    }
+    .newcourt {
+        margin: 10px;
+        font-size: 200%;
+        text-align: center;
+    }
     .btn-checkin {
         background-color: #003300;
         color:#eeeeee;
