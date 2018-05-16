@@ -1,0 +1,64 @@
+body {
+        margin: 40px;
+    }
+    .wrapper {
+        border: 10px;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: auto ;
+        background-color: #aff;
+        color: #244;
+        width: 60%;
+    }
+
+    .court {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: auto auto;
+        padding: 5px;
+        background-color: #22e;
+        color: #144;
+    }
+    .player {
+        background-color: #144;
+        color: #ff1;
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 150%;
+    }
+    .homeplayer {
+        background-color: #fdfe02;
+        color: #fe0000;
+        margin: 10px;
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 150%;
+    }
+    .awayplayer {
+        background-color: #0bff01;
+        color: #fe0000;
+        margin: 10px;
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 150%;
+    }
+    .btn-checkin {
+        background-color: #003300;
+        color:#eeeeee;
+    }
+    .btn-checkout {
+        background-color: #330000;
+        color:#eeeeee;
+    }
+    .checkedin-player-name {
+        font-size:150%;
+        color:#338833
+    }
+    .checkedout-player-name {
+        font-size:150%;
+        color:#883333
+    }
+
+
+
+

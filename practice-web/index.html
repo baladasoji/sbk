@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Shuttlers Badminton Club Practice sessions</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+    <link href="grid.css" rel="stylesheet">
+    <link href="courts.css" rel="stylesheet">
+    <script type="text/javascript" src='sbk.js'></script>
+  </head>
+
+ <body onload="callRest()">
+
+
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#players">Players</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#schedule" onClick="makeSinglesSchedule()">Singles Schedule</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#schedule" onClick="makeDoublesSchedule()">Doubles Schedule</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#" onClick="checkoutAll()">CheckoutAll</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h2 class="display-5">Welcome to SBK practice sessions</h2>
+          <p>You can use this website to check in and check out of practice sessions and to view the schedule of the day.</p>
+        </div>
+      </div>
+
+
+
+
+        <div class="container" id="players">
+        </div> <!-- players -->
+        <div class="container" id="schedule">
+        </div> <!-- players -->
+
+        <!--
+        <div id="schedule">
+            <div class="container">
+            <h2 class="display-5">Court information</h2>
+                <div class="wrapper" name="mylist">
+                        <div class="court">
+                            <div class="homeplayer" id="player1">Vacant</div>
+                            <div class="awayplayer" id="player2">Vacant</div>
+                            <div class="homeplayer" id="player3">Vacant</div>
+                            <div class="awayplayer" id="player4">Vacant</div>
+                        </div>
+                        <div class="court">
+                            <div class="homeplayer" id="player5">Vacant</div>
+                            <div class="awayplayer" id="player6">Vacant</div>
+                            <div class="homeplayer" id="player7">Vacant</div>
+                            <div class="awayplayer" id="player8">Vacant</div>
+                        </div>
+                        <div class="court">
+                            <div class="homeplayer" id="player9">Vacant</div>
+                            <div class="awayplayer" id="player10">Vacant</div>
+                            <div class="homeplayer" id="player11">Vacant</div>
+                            <div class="awayplayer" id="player12">Vacant</div>
+                        </div>
+                        <div class="court">
+                            <div class="homeplayer" id="player13">Vacant</div>
+                            <div class="awayplayer" id="player14">Vacant</div>
+                            <div class="homeplayer" id="player15">Vacant</div>
+                            <div class="awayplayer" id="player16">Vacant</div>
+                        </div>
+                        <div class="court">
+                            <div class="homeplayer" id="player17">Vacant</div>
+                            <div class="awayplayer" id="player18">Vacant</div>
+                            <div class="homeplayer" id="player19">Vacant</div>
+                            <div class="awayplayer" id="player20">Vacant</div>
+                        </div>
+                 </div>
+
+            </div>
+        </div> --> <!-- schedule -->
+
+    </main>
+  </body>
+</html>
