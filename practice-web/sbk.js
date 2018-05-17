@@ -10,7 +10,7 @@ function callPlayersApi(element, url)
         {
             allplayers = JSON.parse(apiXMLReq.responseText);
             var i = 1;
-            var row='<div class="container"> <h2 class="display-5">Player information</h2>' ;
+            var row='<div class="container"> <div class="row"> <div class="col-12 table-header"> Players  </div></div>' ;
             for ( var s in allplayers)
             {
                 var id = allplayers[s].id;
@@ -51,13 +51,15 @@ function showSchedule()
         if (this.readyState == 4)
         {
             plan = JSON.parse(apiXMLReq.responseText);
+            ts = plan['timestamp']*1000;
+            var date = new Date(ts).toLocaleString("da-DK");
             var i = 1;
-            var row='<div class="container"> <h2 class="display-5">Schedule Info</h2>' ;
+            var row=`<div class="container"> <div class="row"> <div class="col-6 table-header"> Schedule prepared at </div> <div class="col-6 table-header"> ${date}</div> </div>` ;
             for ( var s in plan['plan'])
             {
                 var curcourt = plan['plan'][s]['court'];
                 var curplayers = plan['plan'][s]['players'];
-                row = row + `<div class="newcourt"> Court ${curcourt} </div>`;
+                row = row + `<div class="row newcourt">  <div class="col-12"> Court ${curcourt} </div> </div> `;
                 row = row + `<div class="row playerincourt">`;
                 for (var curplayer in curplayers)
                 {
