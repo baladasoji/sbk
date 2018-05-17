@@ -1,38 +1,6 @@
 var player_url = "https://939b5fzk1j.execute-api.eu-west-1.amazonaws.com/Testing/players";
 var schedule_url = "https://939b5fzk1j.execute-api.eu-west-1.amazonaws.com/Testing/schedule";
 var players;
-function callApi(element, url)
-{
-    var apiXMLReq = new XMLHttpRequest();
-    apiXMLReq.onreadystatechange = function() {
-        if (this.readyState == 4)
-        {
-            players = JSON.parse(apiXMLReq.responseText);
-            
-            var i = 1;
-            for (i=1; i<=16;i++)
-            {
-                id = "player"+i;
-                document.getElementById(id).innerHTML = "Vacant";
-            }
-            i=1;
-            for ( var s in players)
-            {
-                id = "player"+i;
-                //alert(id);
-                //alert(players[s]);
-                document.getElementById(id).innerHTML = players[s];
-                i++;
-                // Do something
-            }
-
-        }
-      };
-    apiXMLReq.open("GET", player_url + url , true );
-    apiXMLReq.setRequestHeader("x-api-key","s8Acz0z7Ix2z8t20xyPZu5pQ4WAa2EQ13yFRpUBu");
-    apiXMLReq.send(null);
-
-}
 
 function callPlayersApi(element, url)
 {
@@ -68,6 +36,7 @@ function callPlayersApi(element, url)
     apiXMLReq.send(null);
 
 }
+
 function callRest()
 {
 
@@ -114,20 +83,17 @@ function makeSchedule(type)
     xhr.open("POST", schedule_url+'/create', true);
     xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
     xhr.setRequestHeader("x-api-key","s8Acz0z7Ix2z8t20xyPZu5pQ4WAa2EQ13yFRpUBu");
-    xhr.setRequestHeader('Content-Length',body.length);
+    //xhr.setRequestHeader('Content-Length',body.length);
     xhr.send(body);
     xhr.onload = function () {
         var users = JSON.parse(xhr.responseText);
         //alert(users);
         if (xhr.readyState == 4 && xhr.status == "200") {
-                alert('Schedule Created');
+                alert('Ok');
         } else {
                 alert('Error in making schedule');
         }
     }
-    setTimeout(function(){
-        showSchedule();
-    }, 2000);
 }
 
 function checkoutAll()
@@ -136,9 +102,16 @@ function checkoutAll()
     apiXMLReq.open("GET", player_url + '/clearall' , true );
     apiXMLReq.setRequestHeader("x-api-key","s8Acz0z7Ix2z8t20xyPZu5pQ4WAa2EQ13yFRpUBu");
     apiXMLReq.send(null);
+    apiXMLReq.onload = function () {
+        if (apiXMLReq.readyState == 4 && apiXMLReq.status == "200") {
+           // alert('All players checkedout');
+        } else {
+            alert('Error in checkout All');
+        }
+    }
     setTimeout(function(){
-        callRest();
-    }, 2000);
+        makeSchedule('doubles');
+    }, 2500);
 }
 
 function checkin(id,name)
@@ -149,7 +122,7 @@ function checkin(id,name)
     var xhr = new XMLHttpRequest();
     xhr.open("PUT", player_url+'/checkin', true);
     xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
-    xhr.setRequestHeader('Content-Length',body.length);
+    //xhr.setRequestHeader('Content-Length',body.length);
     xhr.send(body);
     xhr.onload = function () {
         var users = JSON.parse(xhr.responseText);
@@ -162,7 +135,7 @@ function checkin(id,name)
     }
     setTimeout(function(){
         callRest();
-    }, 2000);
+    }, 1500);
 }
 
 
@@ -188,5 +161,5 @@ function checkout(id,name)
     }
     setTimeout(function(){
         callRest();
-    }, 2000);
+    }, 1500);
 }

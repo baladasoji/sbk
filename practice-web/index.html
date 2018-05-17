@@ -26,7 +26,7 @@
 
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">SBK</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -37,19 +37,10 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#players">Players</a>
+            <a class="nav-link" href="#players" onClick="callRest()">Players</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#schedule" onClick="makeSchedule('singles')">Make singles plan</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#schedule" onClick="makeSchedule('doubles')">Make doubles plan</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#schedule" onClick="showSchedule()">Refresh Schedule</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#" onClick="checkoutAll()">CheckoutAll</a>
+            <a class="nav-link" href="#schedule" onClick="showSchedule()">Schedule</a>
           </li>
         </ul>
       </div>
@@ -64,11 +55,13 @@
         <div class="container">
           <h2 class="display-5">Welcome to SBK practice sessions</h2>
           <p>You can use this website to check in and check out of practice sessions and to view the schedule of the day.</p>
+	  <p>The schedules are automatically generated every Friday and Sunday once every 30 minutes based on the number of people checked in. If you need to be in the schedule please ensure that you are checked in atleast 5 mins before the schedule is generated. Schedules are generated at</p>
+	  <p> Friday : 20:10, 20:40, 21:10 </p>
+	  <p> Sunday : 09:10, 09:40, 10:10 </p>
+	  <p>By default only doubles schedule are generated. If you need to manually generate a schedule OR override the automatic one OR prepare a singles schedule you can do so by visiting the <a href=http://practice.shuttlers.dk/admin.html> Admin Page </a> </p>
+
         </div>
       </div>
-
-
-
 
         <div class="container" id="players">
         </div> <!-- players -->
