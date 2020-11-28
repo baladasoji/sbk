@@ -1,55 +1,14 @@
 body {
         margin: 40px;
     }
-    .wrapper {
-        border: 10px;
-        display: grid;
-        grid-gap: 10px;
-        grid-template-columns: auto ;
-        background-color: #aff;
-        color: #244;
-        width: 60%;
-    }
-
-    .court {
-        display: grid;
-        grid-gap: 10px;
-        grid-template-columns: auto auto;
-        padding: 5px;
-        background-color: #22e;
-        color: #144;
-    }
-    .player {
-        background-color: #144;
-        color: #ff1;
-        border-radius: 5px;
-        padding: 20px;
-        font-size: 150%;
-    }
-    .homeplayer {
-        background-color: #fdfe02;
-        color: #fe0000;
-        margin: 10px;
-        border-radius: 5px;
-        padding: 20px;
-        font-size: 150%;
-    }
-    .awayplayer {
-        background-color: #0bff01;
-        color: #fe0000;
-        margin: 10px;
-        border-radius: 5px;
-        padding: 20px;
-        font-size: 150%;
-    }
     .playerincourt {
         background-color: #77bb77;
         border-radius: 5px;
-        font-size: 180%;
+        font-size: 120%;
     }
     .newcourt {
-        margin: 10px;
-        font-size: 200%;
+        font-size: 120%;
+        border-radius: 5px;
         text-align: center;
     }
     .btn-checkin {
@@ -67,6 +26,12 @@ body {
     .checkedout-player-name {
         font-size:150%;
         color:#883333
+    }
+    .table-header{
+        margin-top: 2rem;
+        font-size: 120%;
+        background: #444444;
+        color: #eeeeee;
     }
 
 
